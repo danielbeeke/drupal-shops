@@ -1,7 +1,5 @@
 $(function() {
 
-  L.Icon.Default.imagePath = 'images';
-
   var map = L.map('map', {
     attributionControl: false
   }).setView([51.505, -0.09], 13);
