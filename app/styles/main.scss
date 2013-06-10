@@ -7,3 +7,30 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 html, body, #map {
   height: 100%;
 }
+
+.leaflet-div-icon {
+  border: 0;
+  background: url(../images/drupal-cluster.png);
+  width: 55px !important;
+  height: 46px !important;
+  margin-top: -23px !important;
+  margin-left: -28px !important;
+  color: white;
+
+  b {
+    display: block;
+    left: 4px;
+    position: relative;
+    text-align: center;
+    top: 15px;
+    width: 30px;
+  }
+}
+
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 5px;
+}
