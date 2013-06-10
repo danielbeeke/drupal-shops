@@ -9,7 +9,7 @@ $(function() {
   var d = new Date();
   var n = d.getTime();
 
-  L.tileLayer('http://tilemill.danielbeeke.nl:20008/tile/drupal_shops/{z}/{x}/{y}.png?updated=' + n).addTo(map);
+  L.tileLayer('http://tilemill.danielbeeke.nl:20008/tile/drupal_shops/{z}/{x}/{y}.png').addTo(map);
 
   var features = new L.MarkerClusterGroup({
       iconCreateFunction: function(cluster) {
