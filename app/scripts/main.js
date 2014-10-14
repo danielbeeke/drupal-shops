@@ -2,14 +2,12 @@ $(function() {
 
   var map = L.map('map', {
     attributionControl: false
-  }).setView([51.505, -0.09], 13);
-
-  L.tileLayer('http://{s}.tiles.mapbox.com/v3/examples.map-vyofok3q/{z}/{x}/{y}.png').addTo(map);
+  }).setView([54.505, -0.09], 13);
 
   var d = new Date();
   var n = d.getTime();
 
-  L.tileLayer('http://tilemill.danielbeeke.nl:20008/tile/drupal_shops/{z}/{x}/{y}.png?updated=' + n).addTo(map);
+  L.tileLayer('http://{s}.tilemill.studiofonkel.nl/style/{z}/{x}/{y}.png?id=tmstyle:///home/administrator/styles/dark.tm2&i19upf68').addTo(map);
 
   var features = new L.MarkerClusterGroup({
       iconCreateFunction: function(cluster) {
@@ -37,17 +35,19 @@ $(function() {
   var googleSpreadsheet = new GoogleSpreadsheet();
   googleSpreadsheet.url(url);
   googleSpreadsheet.load(function(result) {
-    $.each(result.items, function(index, company) {
-      if (company.lat && company.long) {
-        L.marker([company.lat, company.long], {
-          icon: myIcon
-        }).addTo(features).bindPopup(company.id);
-      }
-    });
+    if (result.items) {
+      $.each(result.items, function(index, company) {
+        if (company.lat && company.long) {
+          L.marker([company.lat, company.long], {
+            icon: myIcon
+          }).addTo(features).bindPopup(company.id);
+        }
+      });
 
-    features.addTo(map);
-    var bounds = features.getBounds();
-    map.fitBounds(bounds);
+      features.addTo(map);
+      var bounds = features.getBounds();
+      map.fitBounds(bounds);
+    }
   });
 
 });

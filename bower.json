@@ -4,7 +4,10 @@
   "dependencies": {
     "sass-bootstrap": "~2.3.0",
     "modernizr": "~2.6.2",
-    "jquery": "~1.9.1"
+    "jquery": "~1.9.1",
+    "leaflet": "~0.7.3",
+    "Leaflet.markercluster": "Leaflet/Leaflet.markercluster#~0.4.0",
+    "jquery-google-spreadsheet": "nothnk/jquery-google-spreadsheet"
   },
   "devDependencies": {}
 }
