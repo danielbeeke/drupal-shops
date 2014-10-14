@@ -1,11 +1,12 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@import 'sass-bootstrap/lib/bootstrap';
 @import 'leaflet';
 
 html, body, #map {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .leaflet-div-icon {
